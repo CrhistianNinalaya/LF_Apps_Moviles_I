@@ -8,7 +8,10 @@ import com.ninalaya.lf_ninalaya_crhistian.R
 import com.ninalaya.lf_ninalaya_crhistian.databinding.ItemUserBinding
 import com.ninalaya.lf_ninalaya_crhistian.model.Usuarios
 
-class UsuariosAdapter(private val usuarios: List<Usuarios>) : RecyclerView.Adapter<UsuariosAdapter.ViewHolder>() {
+class UsuariosAdapter(private val usuarios: List<Usuarios>, private val listener: OnUserClickListener) : RecyclerView.Adapter<UsuariosAdapter.ViewHolder>() {
+    interface OnUserClickListener {
+        fun onUserClick(userId: Int)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)
@@ -22,6 +25,10 @@ class UsuariosAdapter(private val usuarios: List<Usuarios>) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = usuarios[position]
         holder.bind(user)
+
+        holder.itemView.setOnClickListener{
+            listener.onUserClick(user.id)
+        }
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

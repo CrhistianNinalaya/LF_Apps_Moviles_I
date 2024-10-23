@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_id_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxxxx"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_email_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxxxx"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_password_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAME:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_role_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROLE:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_role_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_creation_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATIONAT:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_creation_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_update_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPDATEAT:"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_update_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOLVER"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:textColor="@android:color/white" />
+</LinearLayout>
