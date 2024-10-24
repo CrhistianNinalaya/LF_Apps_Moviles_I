@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "257297306338",
+    "project_id": "efappsmobiles",
+    "storage_bucket": "efappsmobiles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257297306338:android:abfb09f3daef1e100484bb",
+        "android_client_info": {
+          "package_name": "com.ninalaya.lf_ninalaya_crhistian"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRWoxGBEvHsQ_nSt6dOaVjF8ebQRet-Lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

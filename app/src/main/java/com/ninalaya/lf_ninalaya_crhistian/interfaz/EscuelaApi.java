@@ -14,4 +14,6 @@ public interface EscuelaApi {
 
     @GET("users/{id}")
     Call<Usuarios> getUsuarioPorId(@Path("id") int id);
+
+
 }

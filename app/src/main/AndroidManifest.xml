@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LF_Ninalaya_Crhistian"
         tools:targetApi="31">
-        <activity android:name=".UserShow"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,6 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UserShow"/>
+        <activity android:name=".FindUser"/>
     </application>
 
 </manifest>

@@ -18,7 +18,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity(), UsuariosAdapter.OnUserClickListener {
     private lateinit var usuariosAdapter: UsuariosAdapter
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var lstUsuarios: MutableList<Usuarios>
     private val ruta = "https://api.escuelajs.co/api/v1/"
 
@@ -27,23 +26,22 @@ class MainActivity : AppCompatActivity(), UsuariosAdapter.OnUserClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         lstUsuarios = mutableListOf()
-
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         usuariosAdapter = UsuariosAdapter(lstUsuarios,this)
         binding.recyclerView.adapter = usuariosAdapter
-
         obtenerUsuarios()
+        binding.btnConsultar.setOnClickListener {
+            val intent = Intent(this, FindUser::class.java)
+            startActivity(intent)
+        }
     }
-
     private fun obtenerUsuarios() {
         val retrofit = Retrofit.Builder()
             .baseUrl(ruta)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
         val apiService = retrofit.create(EscuelaApi::class.java)
         val call: Call<List<Usuarios>> = apiService.getUsuarios()
-
         call.enqueue(object : Callback<List<Usuarios>> {
             override fun onResponse(call: Call<List<Usuarios>>, response: Response<List<Usuarios>>) {
                 if (response.isSuccessful) {
@@ -56,7 +54,6 @@ class MainActivity : AppCompatActivity(), UsuariosAdapter.OnUserClickListener {
                     println("Código de respuesta: ${response.code()}")
                 }
             }
-
             override fun onFailure(call: Call<List<Usuarios>>, t: Throwable) {
                 Log.e("MainActivity","Error: ${t.message}")
             }
@@ -93,7 +90,6 @@ class MainActivity : AppCompatActivity(), UsuariosAdapter.OnUserClickListener {
             }
         })
     }
-
     private fun showUserDetails(user: Usuarios) {
         val intent = Intent(this, UserShow::class.java).apply {
             putExtra("USER_ID", user.id)
@@ -106,5 +102,4 @@ class MainActivity : AppCompatActivity(), UsuariosAdapter.OnUserClickListener {
         }
         startActivity(intent)
     }
-
 }
